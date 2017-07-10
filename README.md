@@ -26,7 +26,7 @@ end
 ```
 
 
-## add description for tags:
+## add description for tags(For better seo requirement):
 ```rb
 # 1. rails g migration AddColumnToTags
 # 2. rake db:migrate
@@ -34,6 +34,7 @@ end
 class AddColumnToTag < ActiveRecord::Migration[5.1]
   def change
     add_column :tags, :description, :string
+    add_column :tags, :cn_name, :string
   end
 end
 ```
@@ -43,3 +44,4 @@ end
 ## resources:
 + https://rubyplus.com/articles/4231-Tagging-using-Acts-as-Taggable-On-in-Rails-5
 + https://github.com/mbleigh/acts-as-taggable-on
++ http://railscasts.com/episodes/382-tagging?autoplay=true
