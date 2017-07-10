@@ -7,5 +7,7 @@
 <%= @article.content %>
 </div>
 <footer class="tags">
-<%= @article.tag_list %>
+        <% @article.tag_list.each do |tag| %>
+                <a href="/tags/<%= tag %>"><%= tag %></a>
+        <% end %>
 </footer>
